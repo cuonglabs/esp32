@@ -1,10 +1,10 @@
 // ================= CONFIG =================
 const NAV_ITEMS = [
-  { name: "Home", url: "https://cuonglabs.github.io/esp32/download/", icon: "🏠" },
-  { name: "Control", url: "https://cuonglabs.github.io/esp32/download/control.html", icon: "🎛️" },
-  { name: "Upload", url: "https://cuonglabs.github.io/esp32/download/upload.html", icon: "📤" },
-  { name: "Files", url: "https://cuonglabs.github.io/esp32/download/files.html", icon: "📁" },
-  { name: "Settings", url: "https://cuonglabs.github.io/esp32/download/settings.html", icon: "⚙️" }
+  { name: "Home", url: "https://cuonglabs.github.io/esp32/download/html/", icon: "🏠" },
+  { name: "Control", url: "https://cuonglabs.github.io/esp32/download/html/control.html", icon: "🎛️" },
+  { name: "Upload", url: "https://cuonglabs.github.io/esp32/download/html/upload.html", icon: "📤" },
+  { name: "Files", url: "https://cuonglabs.github.io/esp32/download/html/files.html", icon: "📁" },
+  { name: "Settings", url: "https://cuonglabs.github.io/esp32/download/html/settings.html", icon: "⚙️" }
 ];
 
 // ================= RENDER =================
