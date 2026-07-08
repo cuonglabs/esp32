@@ -1,1 +1,409 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
 
+.nav {
+  margin-bottom: 20px;
+}
+
+.nav button {
+  margin-right: 10px;
+}
+
+.page {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  background: #f0f0f0;
+  transition: 0.2s;
+}
+
+.card.on {
+  background: #4CAF50;
+  color: white;
+}
+
+.card.off {
+  background: #ddd;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav button.active {
+  background: #00c3ff;
+  color: white;
+}
+
+/* ===== LAYOUT ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.logo {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ===== MENU ===== */
+.menu {
+  flex: 1;
+}
+
+.menu-item {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #222;
+}
+
+.menu-item.active {
+  background: #00c3ff;
+  color: black;
+}
+
+/* ===== ICON ===== */
+.icon {
+  width: 25px;
+  text-align: center;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ===== COLLAPSE ===== */
+body.collapsed .sidebar {
+  width: 70px;
+}
+
+body.collapsed .text {
+  display: none;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.toggle {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header {
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body.collapsed .logo {
+  display: none;
+}
+
+body.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+body.collapsed .menu-item {
+  justify-content: center;
+}
+
+.menu-item:hover::after {
+  content: attr(data-name);
+  position: absolute;
+  left: 70px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+tr:hover {
+  background: #f5f5f5;
+}
+
+/* Explorer */
+#fileList {
+  list-style: none;
+  padding: 0;
+}
+
+#fileList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#fileList li:hover {
+  background: #f0f0f0;
+}
+
+/* Folder */
+.dir::before { content: "📁 "; }
+.file::before { content: "📄 "; }
+
+/* Context menu */
+#contextMenu {
+  position: absolute;
+  display: none;
+  background: #222;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#contextMenu div {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#contextMenu div:hover {
+  background: #444;
+}
+
+/* Drag zone */
+#dropZone {
+  border: 2px dashed #999;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Progress */
+#progressBox {
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.toolbar button {
+  background: #00c3ff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.toolbar button:hover {
+  background: #009ed1;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  margin-left: 10px;
+  color: #666;
+}
+
+/* ===== GRID ===== */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+/* ===== FILE ITEM ===== */
+.file-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #eee;
+}
+
+.file-item:hover {
+  background: #f5faff;
+  transform: translateY(-3px);
+}
+
+.file-item .icon {
+  font-size: 40px;
+}
+
+.file-item .name {
+  margin-top: 10px;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.file-item .meta {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ===== CONTEXT MENU ===== */
+#contextMenu {
+  position: absolute;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#contextMenu div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#contextMenu div:hover {
+  background: #444;
+}
+
+#dropZone {
+  border: 2px dashed #00c3ff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#progressBox {
+  height: 8px;
+  background: #ddd;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #00c3ff;
+}
+
+.sidebar-tree {
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.file-item.selected {
+  background: #cce8ff;
+  border: 1px solid #3399ff;
+}
+
+/* preview */
+#preview {
+  position: absolute;
+  width: 150px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 999;
+}
+
+.explorer {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#fileTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#fileTable th {
+  background: #f0f0f0;
+  text-align: left;
+  cursor: pointer;
+}
+
+#fileTable td, th {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#fileTable tr:hover {
+  background: #e6f2ff;
+}
+
+.selected-row {
+  background: #cce8ff !important;
+}
+
+.status-bar {
+  padding: 5px;
+  background: #eee;
+  font-size: 12px;
+}
