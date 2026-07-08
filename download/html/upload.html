@@ -2,19 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ESP32</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="sidebar"></div>
   <div class="main">
     <h1>%DEVICE_NAME%</h1>
-    <div id="home" class="page">
-      <h2>Welcome</h2>
-      <p>ESP32 Web Server Dashboard</p>
-    </div>
+    <h2>Upload File</h2>
+    <form id="uploadForm">
+      <input type="file" name="data">
+      <button type="submit">Upload</button>
+    </form>
+    <p id="uploadStatus"></p>
   </div>
   <script src="/js/nav.js"></script>
-  <script src="/js/core.js"></script>
+  <script src="/js/upload.js"></script>
 </body>
 </html>

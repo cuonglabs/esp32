@@ -2,19 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ESP32</title>
+  <title>ESP32 Control</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="sidebar"></div>
   <div class="main">
     <h1>%DEVICE_NAME%</h1>
-    <div id="home" class="page">
-      <h2>Welcome</h2>
-      <p>ESP32 Web Server Dashboard</p>
+    <div class="page">
+      <h2>GPIO Control</h2>
+      <div id="gpioGrid" class="grid"></div>
     </div>
   </div>
   <script src="/js/nav.js"></script>
   <script src="/js/core.js"></script>
+  <script src="/js/control.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="sidebar"></div>
+    <div class="main">
+        <h1>%DEVICE_NAME%</h1>
+        <p>Firmware Version: <span id="fwVersion">loading...</span></p>
+        <h2>Settings</h2>
+        <button onclick="loadSettings()">Load</button>
+        <button onclick="saveSettings()">Save</button>
+        <pre id="settingsBox"></pre>
+        <hr>
+        <h2>Network Settings</h2>
+        <label>SSID</label>
+        <select id="ssidSelect"></select>
+        <button onclick="scanWifi()">🔄 Scan</button>
+        <br>
+        <label>Password</label>
+        <input id="pass" type="password"><br>
+        <label>
+        <input type="checkbox" id="dhcp"> DHCP
+        </label><br>
+        <div id="staticBox">
+        <label>IP</label><input id="ip"><br>
+        <label>Gateway</label><input id="gateway"><br>
+        <label>Subnet</label><input id="subnet"><br>
+        </div>
+        <button onclick="saveNet()">Save</button>
+        <br>
+        <h2>Firmware Update</h2>
+        <input type="file" id="fw" accept=".bin">
+        <br><br>
+        <button id="btnUpload" onclick="uploadFW()">Upload Firmware</button>
+        <div style="margin-top:10px;">
+        <div style="width:300px; height:20px; border:1px solid #ccc;">
+            <div id="progressBar" style="height:100%; width:0%; background:green;"></div>
+        </div>
+        </div>
+        <p id="fwInfo"></p>
+        <p id="fwStatus"></p>
+    </div>
+    <script src="/js/nav.js"></script>
+    <script src="/js/settings.js"></script>
+</body>
+</html>
